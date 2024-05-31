@@ -37,7 +37,7 @@ const CreateDoc = () => {
 
   // CREATING WEBSOCKET CONNECTION
   useEffect(() => {
-    const s = io("http://localhost:8080");
+    const s = io(process.env.SERVER_URL);
     setSocket(s);
 
     return () => {

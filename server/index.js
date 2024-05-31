@@ -21,7 +21,7 @@ const supabase = createClient(supabaseURL, supabaseKEY);
 
 const io = require("socket.io")(8080, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: process.env.CLIENT_URL,
     methods: ["GET", "POST"],
   },
 });
